@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator program</title>
+    <style>
+        #container{
+            width: 230px;
+            /* height: 450px; */
+            border: 1px solid rgb(15, 15, 15);
+            border-radius: 5px;
+            background-color: rgb(41, 24, 24);
+        }
+        .display{
+            width: 85%;
+            margin: 11px 13px;
+            height:54px ;
+            background-color: gray;
+        }
+        .btn-container{
+            width: 200px;
+            margin: 7px 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+        .btn{
+            width: 54px;
+            height: 54px;
+            border-radius: 5px;
+            border: none;
+            font-size: 18px;
+        }
+        .btn-1{
+color: #fff;
+background-color: black;
+font-weight: bold;
+        }
+        .btn-c{
+color: #fff;
+background-color: rgb(240, 13, 13);
+font-weight: bold;
+        }
+        .btn-s{
+color: #fff;
+background-color: rgb(13, 240, 28);
+font-weight: bold;
+        }
+        .btn-crs{
+color: #fff;
+background-color: rgb(78, 40, 5);
+font-weight: bold;
+        }
+        .btn-equal{
+color: #fff;
+background-color: rgb(218, 119, 26);
+font-weight: bold;
+        }
+input{
+    font-size: 27px;
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input type="text" class="display" readonly>
+        <div class="btn-container">
+            <button class="btn btn-c" onclick="types = ''; document.querySelector('.display').value = types;
+            ">C</button>
+
+
+            <button class="btn btn-1" onclick="types += '1'; document.querySelector('.display').value = types;
+            ">1</button>
+
+
+            <button class="btn btn-1"  onclick="types += '2'; document.querySelector('.display').value = types;
+            ">2</button>
+
+
+            <button class="btn btn-s"  onclick="types += '+'; document.querySelector('.display').value = types;
+            ">+</button>
+
+
+            <button class="btn btn-1"  onclick="types += '3'; document.querySelector('.display').value = types;
+            ">3</button>
+
+
+            <button class="btn btn-1"  onclick="types += '4'; document.querySelector('.display').value = types;
+            ">4</button>
+
+
+            <button class="btn btn-s" onclick="types += '-'; document.querySelector('.display').value = types;
+            ">-</button>
+
+
+            <button class="btn btn-1" onclick="types += '5'; document.querySelector('.display').value = types;
+            ">5</button>
+
+
+            <button class="btn btn-1"  onclick="types += '6'; document.querySelector('.display').value = types;
+            ">6</button>
+
+
+            <button class="btn btn-s" onclick="types += '*'; document.querySelector('.display').value = types;
+            ">*</button>
+
+
+            <button class="btn btn-1" onclick="types += '7'; document.querySelector('.display').value = types;
+            ">7</button>
+
+
+            <button class="btn btn-1"  onclick="types += '8'; document.querySelector('.display').value = types;
+            ">8</button>
+
+
+            <button class="btn btn-s" onclick="types += '/'; document.querySelector('.display').value = types;
+            ">/</button>
+
+
+            <button class="btn btn-1" onclick="types += '9'; document.querySelector('.display').value = types;
+            ">9</button>
+
+
+            <button class="btn btn-1" onclick="types += '0'; document.querySelector('.display').value = types;
+            ">0</button>
+
+
+            <button class="btn btn-crs" onclick="types = ''; document.querySelector('.display').value = types;
+            ">✕</button>
+
+
+            <button class="btn btn-equal"onclick=" let disp =eval(types); 
+            types = disp;
+            document.querySelector('.display').value = types;
+            ">=</button>
+
+
+            <button class="btn btn-1" onclick="types += '.'; document.querySelector('.display').value = types;
+            ">.</button>
+          
+        </div>
+    </div>
+
+<!-- Script for calculator -->
+
+<script>
+    let types = '';
+    document.querySelector('.display').value = types;
+</script>
+
+
+
+
+    <button type="button" onclick="cart = cart + 1;   document.querySelector('#tipo').textContent = `The selected items are ${cart}`;">Click to Add item</button>
+    <button type="button" onclick="cart--;   document.querySelector('#tipo').textContent = `The selected items are ${cart}`;">Remove-items</button>
+    <button type="button" onclick="cart = cart + 2;   document.querySelector('#tipo').textContent = `The selected items are ${cart}`;">Click to Add more item</button>
+    <p id="tipo"></p>
+    <script>
+        let cart = 0;
+        document.querySelector('#tipo').textContent = `The selected items are ${cart}`;
+    </script>
+</body>
+</html>
